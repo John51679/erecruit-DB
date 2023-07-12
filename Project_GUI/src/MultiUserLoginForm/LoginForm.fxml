@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MultiUserLoginForm.LoginController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="530.0" styleClass="login-bg" stylesheets="@../stylish/style.css">
+         <children>
+            <AnchorPane layoutX="31.0" layoutY="45.0" prefHeight="362.0" prefWidth="476.0" style="-fx-background-color: #FFF; -fx-background-radius: 10;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Group layoutX="29.0" layoutY="57.0">
+                     <children>
+                        <Pane fx:id="slidingPane" layoutY="4.0" prefHeight="31.0" prefWidth="419.0">
+                           <children>
+                              <Label fx:id="lblAdmin" alignment="CENTER" layoutX="9.0" onMouseClicked="#openAdminTab" prefHeight="35.0" prefWidth="140.0" styleClass="lbl-user" text="ADMINISTRATOR">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <Label fx:id="lblRecruit" alignment="CENTER" layoutX="152.0" onMouseClicked="#openRecruitTab" prefHeight="35.0" prefWidth="140.0" styleClass="lbl-user" text="RECRUITER">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                              <Label fx:id="lblCand" alignment="CENTER" layoutX="297.0" onMouseClicked="#openCandTab" prefHeight="35.0" prefWidth="140.0" styleClass="lbl-user" text="CANDIDATE">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Label fx:id="lblSatus" alignment="CENTER" layoutX="6.0" prefHeight="38.0" prefWidth="143.0" styleClass="lbl-status" text="ADMINISTRATOR">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </Label>
+                     </children>
+                  </Group>
+                  <TabPane fx:id="tabPaneLogin" layoutX="14.0" layoutY="101.0" prefHeight="308.0" prefWidth="446.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab fx:id="tabAdmin" text="Adminstrator">
+                           <content>
+                              <AnchorPane prefHeight="266.0" prefWidth="384.0">
+                                 <children>
+                                    <TextField fx:id="adminUsername" alignment="TOP_LEFT" layoutX="15.0" layoutY="32.0" prefHeight="26.0" prefWidth="417.0" promptText="Admin Username">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="TEXT" />
+                                       </cursor>
+                                    </TextField>
+                                    <PasswordField fx:id="adminPass" layoutX="15.0" layoutY="103.0" prefHeight="26.0" prefWidth="417.0" promptText="Admin Password">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </PasswordField>
+                                    <Button fx:id="adminLogin" layoutX="166.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#btnAdminLoginAction" prefHeight="40.0" prefWidth="113.0" styleClass="lbl-status" text="LOGIN" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Label fx:id="lblError1" alignment="CENTER" layoutX="16.0" layoutY="142.0" prefHeight="26.0" prefWidth="414.0" textAlignment="CENTER" textFill="#f8370b" textOverrun="CENTER_ELLIPSIS">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="tabRecuit" text="Recruiter">
+                           <content>
+                              <AnchorPane prefHeight="258.0" prefWidth="446.0">
+                                 <children>
+                                    <TextField fx:id="recrUsername" layoutX="15.0" layoutY="32.0" prefHeight="26.0" prefWidth="414.0" promptText="Username">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </TextField>
+                                    <PasswordField fx:id="recrPassword" layoutX="15.0" layoutY="103.0" prefHeight="26.0" prefWidth="414.0" promptText="Password">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </PasswordField>
+                                    <Button fx:id="btnRecruiterLogin" layoutX="166.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#btnRecruiterLoginAction" prefHeight="40.0" prefWidth="113.0" styleClass="btn-login" text="LOGIN" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Label fx:id="lblError2" alignment="CENTER" layoutX="15.0" layoutY="142.0" prefHeight="26.0" prefWidth="414.0" textAlignment="CENTER" textFill="#f8370b" textOverrun="CENTER_ELLIPSIS">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                      <Tab fx:id="tabCand" text="controllers">
+                           <content>
+                              <AnchorPane prefHeight="130.0" prefWidth="446.0">
+                                 <children>
+                                    <TextField fx:id="candUsername" layoutX="15.0" layoutY="32.0" prefHeight="26.0" prefWidth="414.0" promptText="Username">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </TextField>
+                                    <PasswordField fx:id="candPassword" layoutX="15.0" layoutY="103.0" prefHeight="26.0" prefWidth="414.0" promptText="Password">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </PasswordField>
+                                    <Button fx:id="btnCandLoginAction" layoutX="166.0" layoutY="187.0" mnemonicParsing="false" onMouseClicked="#btnCandidateLoginAction" prefHeight="40.0" prefWidth="113.0" styleClass="btn-login" text="LOGIN" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Label fx:id="lblError3" alignment="CENTER" layoutX="15.0" layoutY="142.0" prefHeight="24.0" prefWidth="414.0" textAlignment="CENTER" textFill="#f8370b" textOverrun="CENTER_ELLIPSIS">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

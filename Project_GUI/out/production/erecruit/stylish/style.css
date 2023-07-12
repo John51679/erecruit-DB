@@ -1,0 +1,53 @@
+.login-bg{
+    -fx-background-color:  linear-gradient(to top, rgb(58, 97, 134), rgb(137, 37, 62));
+}
+/*#c31399, #9118fd*/
+.home-bg {
+    -fx-background-color: rgb(58, 97, 134);
+}
+.btn-login{
+    -fx-background-color: rgb(58, 97, 134);
+    -fx-text-fill:  #FFF;
+    -fx-font-size:  15px;
+    -fx-font-weight: 700;
+    -fx-background-radius: 8px;
+}
+
+.btn-red{
+    -fx-background-color: rgb(137, 37, 62);
+    -fx-text-fill:  #FFF;
+    -fx-font-size:  15px;
+    -fx-font-weight: 700;
+    -fx-background-radius: 8px;
+}
+.bck {
+    -fx-background-color: rgba(31, 31, 31, 0.41);
+}
+.btn-middle{
+    -fx-background-color: linear-gradient(to left, rgb(58, 97, 134), rgb(137, 37, 62));
+    -fx-text-fill:  #FFF;
+    -fx-font-size:  15px;
+    -fx-font-weight: 700;
+    -fx-background-radius: 8px;
+}
+.lbl-status{
+    -fx-background-color: rgb(137, 37, 62);
+    -fx-text-fill: #FFFFFF;
+    -fx-text-alignment: center;
+    -fx-font-size: 16px;
+    -fx-background-radius: 8px;
+}
+.lbl-user{
+    -fx-text-fill: black;
+    -fx-text-alignment: center;
+    -fx-font-size: 16px;
+}
+
+.tab-pane{
+    -fx-tab-max-height: 0px;
+}
+.tab-pane .tab-header-area {
+    visibility: hidden ;
+    -fx-padding: -20 0 0 0;
+}
+

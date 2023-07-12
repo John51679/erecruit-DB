@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="400.0" style="-fx-background-color: rgb(58, 97, 134);" stylesheets="@../stylish/style.css" fx:controller="Recruiter.CompInfo" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label alignment="CENTER" prefHeight="85.0" prefWidth="400.0" text="Company Info" textFill="WHITE">
+            <font>
+                <Font name="Arial" size="27.0" />
+            </font>
+        </Label>
+        <GridPane prefHeight="328.0" prefWidth="400.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="125.0" />
+                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0" prefWidth="215.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="120.0" text="ΑΦΜ:" textFill="WHITE">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txtAfm" editable="false" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" />
+                <Label alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="120.0" stylesheets="@../stylish/style.css" text="ΔΟΥ:" textFill="WHITE" GridPane.rowIndex="1">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="120.0" text="Name:" textFill="WHITE" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="120.0" text="Telephone:" textFill="WHITE" GridPane.rowIndex="3">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="120.0" text="Street:" textFill="WHITE" GridPane.rowIndex="4">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="120.0" text="Number:" textFill="WHITE" GridPane.rowIndex="5">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="120.0" text="City:" textFill="WHITE" GridPane.rowIndex="6">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="txtDoy" editable="false" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <TextField fx:id="txtName" editable="false" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="txtTel" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="txtStreet" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <TextField fx:id="txtNum" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <TextField fx:id="txtCity" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <TextField fx:id="txtCountry" prefHeight="25.0" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                <Label alignment="CENTER_RIGHT" prefHeight="36.0" prefWidth="120.0" text="Country:" textFill="WHITE" GridPane.rowIndex="7">
+                    <font>
+                        <Font size="17.0" />
+                    </font>
+                </Label>
+            </children>
+        </GridPane>
+        <AnchorPane prefHeight="73.0" prefWidth="400.0">
+            <children>
+                <Button fx:id="save" layoutX="162.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#btnSave" prefHeight="35.0" prefWidth="76.0" style="-fx-background-color: rgb(137, 37, 62);" styleClass="btn-login" stylesheets="@../stylish/style.css" text="Save" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>
